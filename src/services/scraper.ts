@@ -34,4 +34,6 @@ export const getGraphImage = async () => {
 
   console.log("Saved image as:", fileName);
   await browser.close();
+
+  return fileName;
 };
