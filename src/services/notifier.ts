@@ -5,7 +5,7 @@ import fs from "fs";
 
 dotenv.config();
 
-const BOT_TOKEN = process.env.BOT_TOKEN;
+const BOT_TOKEN = process.env.TELEGRAM_TOKEN;
 
 if (!BOT_TOKEN) {
   throw new Error("BOT_TOKEN missing");
