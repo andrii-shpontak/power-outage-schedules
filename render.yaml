@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: power-outage-bot
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
