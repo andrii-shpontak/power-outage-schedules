@@ -1,6 +1,12 @@
+import express from "express";
+
 import { getCachedFile, isCacheValid, saveCache } from "./services/cache";
 import { sendToTelegram, startTelegramListener } from "./services/notifier";
 import { getGraphImage } from "./services/scraper";
+
+const app = express();
+app.get("/", (_, res) => res.send("Bot is running"));
+app.listen(process.env.PORT || 3000, () => console.log("Server started"));
 
 const run = async (): Promise<void> => {
   try {
