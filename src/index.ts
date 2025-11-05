@@ -1,7 +1,13 @@
 import { getGraphImage } from "./services/scraper";
 
 const run = async (): Promise<void> => {
-  await getGraphImage();
+  try {
+    await getGraphImage();
+  } catch (error) {
+    console.error("🚀 -----------------------🚀");
+    console.error("🚀 ~ run ~ error:", error);
+    console.error("🚀 -----------------------🚀");
+  }
 };
 
 run();
